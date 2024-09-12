@@ -22,7 +22,12 @@ export class TaskboardComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.dragulaService.createGroup(this.list, {
             revertOnSpill: true,
-            accepts: (el, target, source, sibling) => {
+            accepts: (_, target, source) => {
+                if (
+                    (source?.classList.contains('list-1') && !target?.classList.contains('list-2')) ||
+                    (source?.classList.contains('list-3') && !target?.classList.contains('list-2'))
+                ) return false;
+
                 return true;
             }
         });
