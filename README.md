@@ -6,7 +6,7 @@ To get started, fork this repository and run the project with `ng serve`.
 
 ## Live Version
 
-Visit the [GitHub page](https://safeguardprivacy.github.io/Developer-Test/) to see a live version of this Angular application.
+Visit [the live app page](https://developer-test-diogo-lara.netlify.app) to see my live version of this Angular application.
 
 ## Development server
 
