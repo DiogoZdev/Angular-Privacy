@@ -1,0 +1,86 @@
+.btn-options {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    color: #222;
+    padding: 5px;
+    font: italic;
+
+    &:hover {
+        background-color: hsl(45, 74%, 89%);
+    }
+}
+
+.options {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    background-color: white;
+    box-shadow: 0 0 4px #0007;
+    color: #222;
+    padding: 5px;
+    font: italic;
+    display: grid;
+    gap: 5px;
+    transform: translateY(-100%);
+
+    .btn-text {
+        padding: unset;
+        border: unset;
+        background-color: transparent;
+        color: #222;
+        font: italic;
+        text-align: start;
+
+        &:hover {
+            background-color: unset;
+        }
+    }
+}
+
+.note {
+    position: relative;
+    background-color: hsl(45, 68%, 85%);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-weight: bold;
+        padding: .7em;
+        padding-right: 60px;
+        background-color: hsl(45, 68%, 75%);
+        word-break: break-all;
+    }
+
+    .content {
+        font-style: italic;
+        padding: .7em .7em 3rem;
+        word-break: break-all;
+    }
+
+    .date {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 10px;
+        padding: .7em;
+        color: hsl(0, 0%, 20%);
+    }
+}
+
+.note.resolved {
+    background-color: hsl(73, 69%, 75%);
+
+    .title {
+        background-color: hsl(73, 69%, 65%);
+    }
+}
+
+.line-through {
+    text-decoration: line-through;
+}

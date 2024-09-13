@@ -1,0 +1,24 @@
+<div class="modal">
+    <h3>New note</h3>
+    <form [formGroup]="noteForm">
+        <div class="form-input">
+            <input matInput type="text" formControlName="title" placeholder=" ">
+            <label>Title</label>
+        </div>
+
+        <div class="form-input">
+            <textarea
+                matInput
+                class="content"
+                formControlName="content"
+                placeholder=" ">
+            </textarea>
+            <label>Description</label>
+        </div>
+    </form>
+
+    <div class="btn-area">
+        <button class="btn-primary" (click)="addNote()">Add Note</button>
+        <button class="btn-danger" (click)="cancel()">Cancel</button>
+    </div>
+</div>

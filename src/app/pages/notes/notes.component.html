@@ -1,6 +1,13 @@
 <div class="small-page">
-    <h1>Create a Notes Component</h1>
-    <p>Using the <code>NotesComponent</code>, create a place to add a new note, as well as view other notes that have been created.
-        In this task we'd like you to show off your creativity and design skills, so bonus points for extra features or out-of-the-box ideas.</p>
-    <p class="alert">You do not need a backend to save the data, save to the NotesService only.</p>
+    <h1>Notes</h1>
+
+    <button class="btn-primary" (click)="openNoteModal()">+ Add Note</button>
+
+    <div class="notes-area">
+        <Note *ngFor="let note of notes"
+            [note]="note"
+            (deleteEmitter)="deleteNote($event)"
+            (resolveEmitter)="resolveNote(note.id)"
+        />
+    </div>
 </div>
